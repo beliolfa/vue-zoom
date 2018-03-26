@@ -104,7 +104,7 @@ export default {
       }
     },
     mounted () {
-        $('.zoom').zoom({
+        $(this.$el).zoom({
             url: this.url,
             on: this.on,
             duration: this.duration,
