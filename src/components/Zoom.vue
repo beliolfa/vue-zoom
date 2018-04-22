@@ -103,18 +103,26 @@ export default {
           default: false
       }
     },
+    methods: {
+        updateComponent() {
+            $(this.$el).zoom({
+                        url: this.url,
+                        on: this.on,
+                        duration: this.duration,
+                        target: this.target,
+                        touch: this.touch,
+                        magnify: this.magnify,
+                        callback: this.callback,
+                        onZoomIn: this.onZoomIn,
+                        onZoomOut: this.onZoomOut
+                    });
+        }
+
+    },
     mounted () {
-        $(this.$el).zoom({
-            url: this.url,
-            on: this.on,
-            duration: this.duration,
-            target: this.target,
-            touch: this.touch,
-            magnify: this.magnify,
-            callback: this.callback,
-            onZoomIn: this.onZoomIn,
-            onZoomOut: this.onZoomOut
-        });
+        this.$watch('img', img => {
+            this.updateComponent()
+        }, {immediate:true})
     }
 }
 </script>
