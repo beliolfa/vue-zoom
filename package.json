@@ -1,7 +1,7 @@
 {
   "name": "vue-zoom",
   "description": "A Vue Wrapper for jquery-zoom",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "author": "disitec <fjmartinez@disitec.es>",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
