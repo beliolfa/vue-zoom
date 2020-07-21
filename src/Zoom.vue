@@ -1,6 +1,6 @@
 <template>
   <div class="zoom">
-    <img :src="img" :width="width">
+    <img v-bind="$attrs" :src="img" :width="width">
   </div>
 </template>
 
@@ -11,6 +11,8 @@ window.$ = window.jQuery;
 require('jquery-zoom');
 
 export default {
+  inheritAttrs: false,
+
   props:{
     /**
      * The image to display
